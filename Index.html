@@ -309,6 +309,7 @@ footer .footer-grid{display:flex; align-items:center; justify-content:space-betw
     for(const [name,mm,dd] of z){ if(m<mm || (m===mm && d<=dd)) return name; }
     return "الجدي";
   }
+  
   function chineseZodiac(y){ const animals=["الفأر","الثور","النمر","الأرنب","التنين","الثعبان","الحصان","الخروف","القرد","الديك","الكلب","الخنزير"]; return animals[(y-2020)%12<0? (12+((y-2020)%12))%12 : (y-2020)%12]; }
   const stones = ["العقيق","الجمشت","الأكوامارين","الماس","الزمرد","اللؤلؤ/إسكندريت","الياقوت","البريدوت/السبينل","اليَاقوت الأزرق","الأوبال/التورمالين","التوباز/السترين","الفيروز/الزركون/التنزانايت"];
   const fmtZoned = (date, tz, opts)=> new Intl.DateTimeFormat(state.lang, {timeZone:tz, ...opts}).format(date);
